@@ -83,3 +83,21 @@ jobs:
 
           print("Publication validation passed: public life record, 23 repositories, five manuscript parts, and required site files present.")
           PY
+
+      - name: Package deployable site
+        if: github.ref == 'refs/heads/main'
+        shell: bash
+        run: |
+          zip -r netlify-site.zip \
+            index.html life.html LIFE_AND_WORK.md MANUSCRIPT.md PRIVACY.md \
+            CITATION.cff codemeta.json LICENSE.md PUBLICATION_ASSETS.md README.md \
+            netlify.toml assets data manuscript
+
+      - name: Upload deployable site artifact
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: netlify-site
+          path: netlify-site.zip
+          if-no-files-found: error
+          retention-days: 7
