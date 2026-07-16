@@ -1,0 +1,186 @@
+[
+  {
+    "name": "inkframesv5",
+    "url": "https://github.com/artistso/inkframesv5",
+    "category": "creative-technology",
+    "footprint": "37.8 MB repository",
+    "evidence": "substantial code, tests, CI, release tooling, and documentation",
+    "description": "The mature InkFrame Studio line: an offline-first, stylus-centered drawing and frame-animation application with a WebView shipping architecture."
+  },
+  {
+    "name": "SoCreatev1",
+    "url": "https://github.com/artistso/SoCreatev1",
+    "category": "creative-technology",
+    "footprint": "19.7 MB repository",
+    "evidence": "early application iteration and AI Studio scaffold",
+    "description": "An early SoCreate application iteration documenting the beginning of the drawing-and-animation lineage."
+  },
+  {
+    "name": "SoCreatev2",
+    "url": "https://github.com/artistso/SoCreatev2",
+    "category": "creative-technology",
+    "footprint": "15.0 MB repository",
+    "evidence": "functional Phase 1 core, CI, CLI, and documented limitations",
+    "description": "A local-first Android drawing and animation implementation with working brush, fill, frame, save/load, and tiled-canvas capabilities."
+  },
+  {
+    "name": "socreate",
+    "url": "https://github.com/artistso/socreate",
+    "category": "creative-technology",
+    "footprint": "11.4 MB repository",
+    "evidence": "large feature specification with mixed implemented and pending components",
+    "description": "A professional Android art-studio architecture centered on the Samsung Galaxy Tab S10+, S Pen interaction, animation, and extensive feature modeling."
+  },
+  {
+    "name": "inkframe",
+    "url": "https://github.com/artistso/inkframe",
+    "category": "creative-technology",
+    "footprint": "8.4 MB repository",
+    "evidence": "native Kotlin/OpenGL implementation and architecture documentation",
+    "description": "The native Kotlin and OpenGL ES branch of InkFrame Studio, emphasizing local privacy, modular rendering, and a Fibonacci-influenced interface."
+  },
+  {
+    "name": "socreateapp",
+    "url": "https://github.com/artistso/socreateapp",
+    "category": "creative-technology",
+    "footprint": "5.8 MB repository",
+    "evidence": "Android CI and release template infrastructure",
+    "description": "A GitHub Actions-centered Android packaging and signing template used to support browser-first development and remote APK production."
+  },
+  {
+    "name": "nexus_canvas",
+    "url": "https://github.com/artistso/nexus_canvas",
+    "category": "creative-technology",
+    "footprint": "5.5 MB repository",
+    "evidence": "comprehensive architecture manifesto with implementation claims requiring repository-level audit",
+    "description": "A maximalist Android art-studio proposal combining Rust, ECS, GPU compute, React Native, event sourcing, animation, and collaboration."
+  },
+  {
+    "name": "Draw",
+    "url": "https://github.com/artistso/Draw",
+    "category": "creative-technology",
+    "footprint": "442 KB repository",
+    "evidence": "small prototype footprint",
+    "description": "A compact drawing-application experiment within the broader creative-tool lineage."
+  },
+  {
+    "name": "Inkframes",
+    "url": "https://github.com/artistso/Inkframes",
+    "category": "creative-technology",
+    "footprint": "225 KB repository",
+    "evidence": "small iteration or archival branch",
+    "description": "An intermediate InkFrame-named repository representing the iterative evolution of the art application."
+  },
+  {
+    "name": "quantum_frames",
+    "url": "https://github.com/artistso/quantum_frames",
+    "category": "creative-technology",
+    "footprint": "90 KB repository",
+    "evidence": "concept-scale repository",
+    "description": "A small creative-technology experiment linking frame-based media with the portfolio’s quantum visual language."
+  },
+  {
+    "name": "SoCreatev3",
+    "url": "https://github.com/artistso/SoCreatev3",
+    "category": "creative-technology",
+    "footprint": "empty repository",
+    "evidence": "reserved iteration with no substantive public content",
+    "description": "A reserved third-generation SoCreate repository whose public state should be treated as a placeholder."
+  },
+  {
+    "name": "synapshield",
+    "url": "https://github.com/artistso/synapshield",
+    "category": "research",
+    "footprint": "1.9 MB repository",
+    "evidence": "technical paper, simulation code, metadata, and self-reported submission status",
+    "description": "A speculative computational-bioengineering proposal for a gut–brain hydrogel intervention related to Parkinson’s disease. Medical efficacy claims require independent domain validation."
+  },
+  {
+    "name": "gutty",
+    "url": "https://github.com/artistso/gutty",
+    "category": "research",
+    "footprint": "1.8 MB repository",
+    "evidence": "equations, CLI solver, tests, and deliberately comic framing",
+    "description": "The Dangle Axiom: a hybrid mathematical, engineering, and satirical framework that translates an improvised phrase into multiple formal domains."
+  },
+  {
+    "name": "Constraints-on-Information-Partitioning-in-Quantum-Gravitational-Bounces",
+    "url": "https://github.com/artistso/Constraints-on-Information-Partitioning-in-Quantum-Gravitational-Bounces",
+    "category": "research",
+    "footprint": "181 KB repository",
+    "evidence": "research manuscript repository requiring paper-level technical review",
+    "description": "A quantum-gravity research project focused on information partitioning and bounce scenarios."
+  },
+  {
+    "name": "whitepapers",
+    "url": "https://github.com/artistso/whitepapers",
+    "category": "research",
+    "footprint": "85 KB repository",
+    "evidence": "small publication archive",
+    "description": "A repository intended to collect formal papers, proposals, and technical manuscripts across the portfolio."
+  },
+  {
+    "name": "qwess",
+    "url": "https://github.com/artistso/qwess",
+    "category": "research",
+    "footprint": "63 KB repository",
+    "evidence": "concept-scale research repository",
+    "description": "A compact exploratory research project within the portfolio’s quantum and mathematical cluster."
+  },
+  {
+    "name": "quantumg",
+    "url": "https://github.com/artistso/quantumg",
+    "category": "research",
+    "footprint": "59 KB repository",
+    "evidence": "small research or application concept repository",
+    "description": "A quantum-themed project whose small public footprint warrants concept-level rather than production-level classification."
+  },
+  {
+    "name": "Astrothorge",
+    "url": "https://github.com/artistso/Astrothorge",
+    "category": "experiments",
+    "footprint": "3.2 MB repository",
+    "evidence": "substantial repository footprint with minimal public README description",
+    "description": "A larger experimental project whose public documentation is currently too sparse for stronger classification."
+  },
+  {
+    "name": "inkseige",
+    "url": "https://github.com/artistso/inkseige",
+    "category": "experiments",
+    "footprint": "39 KB repository",
+    "evidence": "concept-scale experiment",
+    "description": "An experimental project name combining the portfolio’s ink-centered visual identity with game or siege mechanics."
+  },
+  {
+    "name": "Risingsmoke",
+    "url": "https://github.com/artistso/Risingsmoke",
+    "category": "experiments",
+    "footprint": "4 KB repository",
+    "evidence": "minimal public content",
+    "description": "A very small experimental or narrative repository that should be treated as an early placeholder."
+  },
+  {
+    "name": "mono",
+    "url": "https://github.com/artistso/mono",
+    "category": "experiments",
+    "footprint": "empty repository",
+    "evidence": "reserved repository with no substantive public content",
+    "description": "A reserved experimental repository awaiting a documented implementation or publication role."
+  },
+  {
+    "name": "Pages",
+    "url": "https://github.com/artistso/Pages",
+    "category": "publishing",
+    "footprint": "empty repository",
+    "evidence": "reserved publishing repository",
+    "description": "A reserved publication or GitHub Pages surface within the broader public-authorship system."
+  },
+  {
+    "name": "stevenowens",
+    "url": "https://github.com/artistso/stevenowens",
+    "category": "publishing",
+    "footprint": "publication repository",
+    "evidence": "dissertation, portfolio census, static website, and correction workflow",
+    "description": "The central publication and identity repository for the dissertation, portfolio map, and future evidence-aware public scholarship."
+  }
+]

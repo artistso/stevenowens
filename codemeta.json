@@ -1,0 +1,30 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "CreativeWork",
+  "name": "The SoQuarky System",
+  "description": "An independent dissertation-style monograph and interactive portfolio study of the artistso GitHub corpus and @soquarky public-authorship system.",
+  "version": "1.0.0",
+  "datePublished": "2026-07-16",
+  "codeRepository": "https://github.com/artistso/stevenowens",
+  "url": "https://github.com/artistso/stevenowens",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Steven Michael Allen",
+      "familyName": "Owens",
+      "identifier": "@soquarky"
+    }
+  ],
+  "keywords": [
+    "local-first software",
+    "agentic software production",
+    "creative technology",
+    "public authorship",
+    "repository archaeology",
+    "digital drawing",
+    "animation"
+  ],
+  "license": "https://github.com/artistso/stevenowens/blob/main/LICENSE.md",
+  "programmingLanguage": ["HTML", "CSS", "JavaScript", "Markdown"],
+  "runtimePlatform": "Static web browser"
+}

@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Please cite this monograph and repository using the metadata below."
+title: "The SoQuarky System: Vernacular Polymathy, Agentic Software Production, and Public Authorship Across Creative Technology, Speculative Science, and Social Media"
+type: generic
+version: 1.0.0
+date-released: 2026-07-16
+authors:
+  - family-names: Owens
+    given-names: Steven Michael Allen
+    alias: soquarky
+repository-code: "https://github.com/artistso/stevenowens"
+url: "https://github.com/artistso/stevenowens"
+license: LicenseRef-Proprietary
+keywords:
+  - local-first software
+  - agentic software development
+  - creative technology
+  - public authorship
+  - repository archaeology
+  - digital drawing
+  - frame-by-frame animation
+abstract: >-
+  An independent dissertation-style monograph interpreting the artistso GitHub
+  corpus and @soquarky public identity as a vernacular research-and-development
+  studio spanning creative software, speculative research, agentic production,
+  public testimony, advocacy, and computational satire.
