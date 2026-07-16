@@ -9,12 +9,13 @@ This file places events before prose. Dates remain blank until Steven confirms t
 | 2026-07-16 | The public life-and-work site and dissertation were merged into the `main` branch of `artistso/stevenowens`. | GitHub repository history | confirmed |
 | 2026-07-16 | The life-novel workspace was started on the `publication/life-novel` branch. | GitHub repository history | confirmed |
 | 2026-07-16 | Steven selected his earliest clear childhood memory as the beginning of the memoir-novel. | author instruction | author-confirmed |
+| 2026-07-16 | Steven approved Chapter One, “The Dewdrop,” as written. | author instruction | approved |
 
 ## Events requiring dates and scene details
 
 | Date or age | Event | What happened | Location | People present | Source | Public approval |
 |---|---|---|---|---|---|---|
-| Around age 3; exact date unknown | Earliest clear memory — “The Dewdrop” | I moved into my second stepfather's three-story home, sat at the top of the outdoor steps with my younger sister, examined a blade of grass and its dewdrop, then carried a yellow wishing flower back to her. | Everett, Washington | Steven and his younger sister | author testimony; private autobiography source archive | chapter draft authorized; final wording pending |
+| Around age 3; exact date unknown | Earliest clear memory — “The Dewdrop” | I moved into my second stepfather's three-story home, sat at the top of the outdoor steps with my younger sister, examined a blade of grass and its dewdrop, then carried a yellow wishing flower back to her. | Everett, Washington | Steven and his younger sister | author testimony; private autobiography source archive | approved July 16, 2026 |
 | TBD | Beginning self-directed learning |  |  |  | author testimony | pending |
 | TBD | First public post or video |  |  |  | platform record / testimony | pending |
 | TBD | First use of @soquarky |  |  |  | platform record / testimony | pending |
