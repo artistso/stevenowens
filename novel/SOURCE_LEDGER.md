@@ -24,10 +24,10 @@ Every factual statement in the book receives a source label before publication.
 
 | Chapter | Claim or event | Source code | Source location | Confidence | Public approval | Notes |
 |---|---|---|---|---|---|---|
-| 1 — The Dewdrop | Earliest clear memory occurred around age three after moving into a three-story home in Everett, Washington. | T, D | Steven's direct account; autobiography v0.2 in the private source archive | author-confirmed; exact date approximate | chapter draft authorized; final wording pending | Exact date, street address, and independent corroboration remain open. |
-| 1 — The Dewdrop | Steven sat with his younger sister at the top of the outdoor steps and told her that he loved her. | T, D | Steven's direct account; autobiography v0.2 in the private source archive | author-confirmed | chapter draft authorized; final wording pending | Public prose omits unnecessary third-party identifiers. |
-| 1 — The Dewdrop | Steven examined a blade of grass, felt different textures on its two sides, and caught the dewdrop between his fingers. | T, D | Steven's direct account; autobiography v0.2 in the private source archive | author-confirmed | chapter draft authorized; final wording pending | Sensory sequence retained without added interpretation. |
-| 1 — The Dewdrop | Steven picked a yellow wishing flower, carried it to his sister, and she made a wish. | T, D | Steven's direct account; autobiography v0.2 in the private source archive | author-confirmed | chapter draft authorized; final wording pending | Remembered action and dialogue only; no invented response added. |
+| 1 — The Dewdrop | Earliest clear memory occurred around age three after moving into a three-story home in Everett, Washington. | T, D | Steven's direct account; autobiography v0.2 in the private source archive | author-confirmed; exact date approximate | approved July 16, 2026 | Exact date, street address, and independent corroboration remain open. |
+| 1 — The Dewdrop | Steven sat with his younger sister at the top of the outdoor steps and told her that he loved her. | T, D | Steven's direct account; autobiography v0.2 in the private source archive | author-confirmed | approved July 16, 2026 | Public prose omits unnecessary third-party identifiers. |
+| 1 — The Dewdrop | Steven examined a blade of grass, felt different textures on its two sides, and caught the dewdrop between his fingers. | T, D | Steven's direct account; autobiography v0.2 in the private source archive | author-confirmed | approved July 16, 2026 | Sensory sequence retained without added interpretation. |
+| 1 — The Dewdrop | Steven picked a yellow wishing flower, carried it to his sister, and she made a wish. | T, D | Steven's direct account; autobiography v0.2 in the private source archive | author-confirmed | approved July 16, 2026 | Remembered action and dialogue only; no invented response added. |
 
 ## Entry template
 
