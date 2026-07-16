@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://steven-owens-autobiography.netlify.app/sitemap.xml
