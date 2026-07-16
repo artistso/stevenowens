@@ -26,6 +26,7 @@ jobs:
               "README.md",
               "index.html",
               "life.html",
+              "novel.html",
               "LIFE_AND_WORK.md",
               "PRIVACY.md",
               "assets/styles.css",
@@ -35,6 +36,13 @@ jobs:
               "codemeta.json",
               "netlify.toml",
               "data/repositories.json",
+              "novel/README.md",
+              "novel/OUTLINE.md",
+              "novel/TIMELINE.md",
+              "novel/VOICE.md",
+              "novel/SOURCE_LEDGER.md",
+              "novel/HUGGING_FACE.md",
+              "novel/chapters/README.md",
           ]
           required += [f"manuscript/part-{n}-{suffix}.md" for n, suffix in [
               (1, "foundations"),
@@ -62,7 +70,7 @@ jobs:
               raise SystemExit(f"Unexpected repository categories: {bad_categories}")
 
           html = Path("index.html").read_text()
-          for target in ["life.html", "assets/styles.css", "assets/app.js", "MANUSCRIPT.md", "data/repositories.json"]:
+          for target in ["life.html", "novel.html", "assets/styles.css", "assets/app.js", "MANUSCRIPT.md", "data/repositories.json"]:
               if target not in html:
                   raise SystemExit(f"index.html does not reference {target}")
 
@@ -71,17 +79,38 @@ jobs:
               if target not in life_html:
                   raise SystemExit(f"life.html does not reference {target}")
 
+          novel_html = Path("novel.html").read_text()
+          for target in ["novel/OUTLINE.md", "novel/TIMELINE.md", "novel/VOICE.md", "novel/SOURCE_LEDGER.md", "novel/chapters/README.md"]:
+              if target not in novel_html:
+                  raise SystemExit(f"novel.html does not reference {target}")
+
           life_record = Path("LIFE_AND_WORK.md").read_text()
           for phrase in ["Steven Michael Allen Owens", "@soquarky", "What I have built", "A public record, not a private-data dump"]:
               if phrase not in life_record:
                   raise SystemExit(f"LIFE_AND_WORK.md is missing required section or identity: {phrase}")
+
+          outline = Path("novel/OUTLINE.md").read_text()
+          if outline.count("## Part ") != 4:
+              raise SystemExit("Expected four chronological book parts")
+          if "18. **The life I am still building**" not in outline:
+              raise SystemExit("Memoir-novel outline is incomplete")
+
+          voice = Path("novel/VOICE.md").read_text().lower()
+          for phrase in ["invented dialogue", "invented motives", "inspirational filler", "changing steven's meaning"]:
+              if phrase not in voice:
+                  raise SystemExit(f"VOICE.md is missing safeguard: {phrase}")
+
+          source_ledger = Path("novel/SOURCE_LEDGER.md").read_text()
+          for code in ["| T |", "| R |", "| P |", "| D |", "| X |"]:
+              if code not in source_ledger:
+                  raise SystemExit(f"SOURCE_LEDGER.md is missing source code {code}")
 
           manuscript = Path("MANUSCRIPT.md").read_text()
           for path in required:
               if path.startswith("manuscript/") and path not in manuscript:
                   raise SystemExit(f"MANUSCRIPT.md does not link to {path}")
 
-          print("Publication validation passed: public life record, 23 repositories, five manuscript parts, and required site files present.")
+          print("Publication validation passed: public life record, memoir-novel system, 23 repositories, five manuscript parts, and required site files present.")
           PY
 
       - name: Package deployable site
@@ -89,9 +118,9 @@ jobs:
         shell: bash
         run: |
           zip -r netlify-site.zip \
-            index.html life.html LIFE_AND_WORK.md MANUSCRIPT.md PRIVACY.md \
+            index.html life.html novel.html LIFE_AND_WORK.md MANUSCRIPT.md PRIVACY.md \
             CITATION.cff codemeta.json LICENSE.md PUBLICATION_ASSETS.md README.md \
-            netlify.toml assets data manuscript
+            netlify.toml assets data manuscript novel
 
       - name: Upload deployable site artifact
         if: github.ref == 'refs/heads/main'

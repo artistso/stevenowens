@@ -1,14 +1,15 @@
 # Steven Owens / @soquarky
 
-This repository is the public life, work, and publication home of **Steven Michael Allen Owens / @soquarky**.
+This repository is the public life, work, book, and publication home of **Steven Michael Allen Owens / @soquarky**.
 
 It presents:
 
 - a public autobiography and accomplishment record
+- a chronological first-person memoir-novel project
 - **The SoQuarky System**, an independent dissertation-style monograph
 - an evidence-aware map of the `artistso` GitHub portfolio
-- a static public website designed for Netlify
-- correction, privacy, and claim-state protocols
+- a static public website configured for Netlify
+- correction, privacy, source-control, and claim-state protocols
 
 > **Scope note:** This is an independent public record and scholarly portfolio study. It is not represented as a degree awarded by an accredited university. First-person testimony is identified as testimony; repository claims are identified as repository claims; scientific and medical proposals are not treated as validated merely because they contain equations, simulations, code, or publication-style formatting.
 
@@ -17,12 +18,35 @@ It presents:
 - `index.html` — public landing page centered on Steven Owens and the larger authorship system
 - `life.html` — visual life-and-work page
 - `LIFE_AND_WORK.md` — public autobiography and accomplishment record
-- `MANUSCRIPT.md` — web-readable monograph
+- `novel.html` — public memoir-novel project page
+- `novel/` — timeline, outline, voice rules, source ledger, model policy, and chapter workspace
+- `MANUSCRIPT.md` — web-readable dissertation-style monograph
 - `data/repositories.json` — census of 23 public repositories
 - `CITATION.cff` and `codemeta.json` — machine-readable publication metadata
 - `netlify.toml` — zero-build Netlify configuration
 - `.github/ISSUE_TEMPLATE/` — correction and evidence workflows
 - `PRIVACY.md` — mandatory private-source/public-output boundary
+
+## Memoir-novel method
+
+The provisional book title is **The Life I Built**. The book is organized as a chronological first-person memoir-novel with 18 provisional chapters.
+
+The production order is:
+
+1. place the event in `novel/TIMELINE.md`
+2. record its sources and confidence in `novel/SOURCE_LEDGER.md`
+3. draft in Steven's first-person voice
+4. check the draft against `novel/VOICE.md`
+5. verify dates, sequence, names, and quotations
+6. publish only after Steven approves the wording
+
+The project prohibits invented dialogue, invented motives, composite people presented as real, unsupported biographical facts, and generic inspirational filler.
+
+## Hugging Face assistance
+
+Hugging Face models may assist with chronology checks, repetition detection, outline comparison, and constrained line editing. They are not biography sources and may not generate memories or fill timeline gaps. See [`novel/HUGGING_FACE.md`](novel/HUGGING_FACE.md).
+
+The current recommended open-model editing option is `Qwen/Qwen2.5-7B-Instruct`, with `Qwen/Qwen3-8B` as a larger optional diagnostic model when suitable hardware is available. The book remains fully usable without remote paid inference.
 
 ## What the public record covers
 
@@ -70,11 +94,18 @@ netlify dev
 
 ## Netlify deployment
 
-The repository is configured as a zero-build static site with the repository root as its publish directory. A Netlify account is connected, but no site has yet been created; deployment should occur only after the new project is explicitly approved.
+The Netlify project **`soquarky-system`** has been created and the production name `soquarky-system.netlify.app` is reserved. The repository is configured as a zero-build static site with the repository root as its publish directory.
+
+A production deploy still requires one of these secure operations:
+
+- connect `artistso/stevenowens` to the Netlify project through the Netlify dashboard, or
+- run a deployment with a Netlify authentication token stored as a secret outside Git history
+
+Never commit a Netlify token or one-time deployment credential to this repository.
 
 ## Corrections and evidence
 
-Use GitHub Issues to report factual corrections, repository-classification corrections, accessibility defects, biographical corrections, or evidence that changes a C0–C5 classification.
+Use GitHub Issues to report factual corrections, repository-classification corrections, accessibility defects, biographical corrections, timeline corrections, or evidence that changes a C0–C5 classification.
 
 ## Authorship
 
