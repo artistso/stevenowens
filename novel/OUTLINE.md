@@ -12,8 +12,8 @@ A direct statement of purpose: I want people to see me, what happened, what I ma
 
 ## Part I — Before the public record
 
-1. **The opening event** — selected by Steven.
-2. **The earliest years I can place** — first clear memories, locations, and people.
+1. **The Dewdrop** — my earliest clear memory in Everett, Washington; drafted and pending approval.
+2. **The earliest years I can place** — the next confirmed memories, locations, households, and people after the Everett scene.
 3. **School and self-education** — what formal education did and did not provide.
 4. **What I learned to do alone** — practical knowledge, technology, art, and survival routines.
 
@@ -38,7 +38,7 @@ A direct statement of purpose: I want people to see me, what happened, what I ma
 15. **The SoQuarky System** — organizing the public repositories and dissertation.
 16. **The Life OS** — building a structured record without publishing everything.
 17. **What the record proves and what it does not** — testimony, artifacts, tests, and validation.
-18. **The life I am still building** — current work and the next dated actions.
+18. **The life I am still building** — current work through July 16, 2026, and the next dated actions.
 
 ## Chapter status rule
 
