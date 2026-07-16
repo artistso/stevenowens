@@ -3,3 +3,19 @@
 Thumbs.db
 *.tmp
 *.log
+
+# Private-source material must never enter this public repository.
+uploads/
+private/
+evidence/
+medical/
+benefits/
+content/people/
+content/inbox/*
+!content/inbox/_index.md
+
+# Local secrets and credentials.
+.env
+.env.*
+*.key
+*.pem
