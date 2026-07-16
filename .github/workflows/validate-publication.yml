@@ -25,6 +25,9 @@ jobs:
           required = [
               "README.md",
               "index.html",
+              "life.html",
+              "LIFE_AND_WORK.md",
+              "PRIVACY.md",
               "assets/styles.css",
               "assets/app.js",
               "MANUSCRIPT.md",
@@ -59,14 +62,24 @@ jobs:
               raise SystemExit(f"Unexpected repository categories: {bad_categories}")
 
           html = Path("index.html").read_text()
-          for target in ["assets/styles.css", "assets/app.js", "MANUSCRIPT.md", "data/repositories.json"]:
+          for target in ["life.html", "assets/styles.css", "assets/app.js", "MANUSCRIPT.md", "data/repositories.json"]:
               if target not in html:
                   raise SystemExit(f"index.html does not reference {target}")
+
+          life_html = Path("life.html").read_text()
+          for target in ["LIFE_AND_WORK.md", "MANUSCRIPT.md", "data/repositories.json", "PRIVACY.md"]:
+              if target not in life_html:
+                  raise SystemExit(f"life.html does not reference {target}")
+
+          life_record = Path("LIFE_AND_WORK.md").read_text()
+          for phrase in ["Steven Michael Allen Owens", "@soquarky", "What I have built", "A public record, not a private-data dump"]:
+              if phrase not in life_record:
+                  raise SystemExit(f"LIFE_AND_WORK.md is missing required section or identity: {phrase}")
 
           manuscript = Path("MANUSCRIPT.md").read_text()
           for path in required:
               if path.startswith("manuscript/") and path not in manuscript:
                   raise SystemExit(f"MANUSCRIPT.md does not link to {path}")
 
-          print("Publication validation passed: 23 repositories, five manuscript parts, required site files present.")
+          print("Publication validation passed: public life record, 23 repositories, five manuscript parts, and required site files present.")
           PY
