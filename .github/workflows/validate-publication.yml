@@ -2,7 +2,7 @@ name: Validate publication
 
 on:
   push:
-    branches: [main, "publication/**"]
+    branches: [main, "publication/**", "deployment/**"]
   pull_request:
 
 permissions:
@@ -85,7 +85,6 @@ jobs:
           PY
 
       - name: Package deployable site
-        if: github.ref == 'refs/heads/main'
         shell: bash
         run: |
           zip -r netlify-site.zip \
@@ -94,7 +93,6 @@ jobs:
             netlify.toml assets data manuscript
 
       - name: Upload deployable site artifact
-        if: github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v4
         with:
           name: netlify-site
