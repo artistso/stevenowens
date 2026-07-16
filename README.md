@@ -1,2 +1,61 @@
-# stevenowens
-this is the github of steven owens a kidnapped victim in progress
+# Steven Owens / @soquarky
+
+This repository is the publication home for **The SoQuarky System: Vernacular Polymathy, Agentic Software Production, and Public Authorship Across Creative Technology, Speculative Science, and Social Media**.
+
+It presents an independent dissertation-style monograph, an evidence-aware map of the `artistso` GitHub portfolio, and a static research website designed for Netlify.
+
+> **Scope note:** This is an independent scholarly monograph and portfolio study. It is not represented as a degree awarded by an accredited university. First-person testimony is identified as testimony; repository claims are identified as repository claims; scientific and medical proposals are not treated as validated merely because they contain equations, simulations, code, or publication-style formatting.
+
+## Publication architecture
+
+- `index.html` — public landing page and interactive portfolio map
+- `MANUSCRIPT.md` — web-readable monograph
+- `data/repositories.json` — census of 23 public repositories
+- `CITATION.cff` and `codemeta.json` — machine-readable publication metadata
+- `netlify.toml` — zero-build Netlify configuration
+- `.github/ISSUE_TEMPLATE/` — correction and evidence workflows
+
+## Claim-state lattice
+
+| Level | Meaning |
+|---|---|
+| C0 | Idea, aspiration, or informal concept |
+| C1 | Written specification or design record |
+| C2 | Implemented code or executable artifact |
+| C3 | Automated tests, CI, benchmark, or internal validation |
+| C4 | Independent reproduction or external technical review |
+| C5 | Domain validation, peer review, clinical validation, field validation, or equivalent |
+
+The lattice prevents plans, implementations, simulations, tests, replications, and real-world results from being presented as interchangeable.
+
+## Local development
+
+No package installation or build step is required.
+
+```bash
+python -m http.server 8080
+```
+
+For Netlify CLI development:
+
+```bash
+netlify dev
+```
+
+## Netlify deployment
+
+The repository is configured as a zero-build static site with the repository root as its publish directory. A Netlify account is connected, but no site has yet been created; deployment should occur only after the new project is explicitly approved.
+
+## Corrections and evidence
+
+Use GitHub Issues to report factual corrections, repository-classification corrections, accessibility defects, or evidence that changes a C0–C5 classification.
+
+## Authorship
+
+**Steven Michael Allen Owens**  
+Public identity: **@soquarky**  
+GitHub corpus: [artistso](https://github.com/artistso)
+
+## License
+
+Copyright © 2026 Steven Michael Allen Owens. All rights reserved. See `LICENSE.md`.
