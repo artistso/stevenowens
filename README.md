@@ -14,6 +14,7 @@ It presents an independent dissertation-style monograph, an evidence-aware map o
 - `CITATION.cff` and `codemeta.json` — machine-readable publication metadata
 - `netlify.toml` — zero-build Netlify configuration
 - `.github/ISSUE_TEMPLATE/` — correction and evidence workflows
+- `PRIVACY.md` — mandatory private-source/public-output boundary
 
 ## Claim-state lattice
 
@@ -27,6 +28,10 @@ It presents an independent dissertation-style monograph, an evidence-aware map o
 | C5 | Domain validation, peer review, clinical validation, field validation, or equivalent |
 
 The lattice prevents plans, implementations, simulations, tests, replications, and real-world results from being presented as interchangeable.
+
+## Privacy boundary
+
+This is a **public-output repository**, not the raw Life OS source vault. Do not commit medical or benefits records, private uploads, exact contact or location data, account exports, private-person files, inbox captures, credentials, or unreviewed autobiographical evidence. See [`PRIVACY.md`](PRIVACY.md).
 
 ## Local development
 
