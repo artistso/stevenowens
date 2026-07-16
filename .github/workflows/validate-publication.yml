@@ -1,0 +1,72 @@
+name: Validate publication
+
+on:
+  push:
+    branches: [main, "publication/**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Validate publication files and corpus
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          required = [
+              "README.md",
+              "index.html",
+              "assets/styles.css",
+              "assets/app.js",
+              "MANUSCRIPT.md",
+              "CITATION.cff",
+              "codemeta.json",
+              "netlify.toml",
+              "data/repositories.json",
+          ]
+          required += [f"manuscript/part-{n}-{suffix}.md" for n, suffix in [
+              (1, "foundations"),
+              (2, "creative-technology"),
+              (3, "agents-research-and-public-voice"),
+              (4, "governance-and-program"),
+              (5, "conclusion-appendices-and-references"),
+          ]]
+
+          missing = [path for path in required if not Path(path).is_file()]
+          if missing:
+              raise SystemExit(f"Missing required files: {missing}")
+
+          repositories = json.loads(Path("data/repositories.json").read_text())
+          if len(repositories) != 23:
+              raise SystemExit(f"Expected 23 repositories, found {len(repositories)}")
+
+          names = [entry["name"] for entry in repositories]
+          if len(names) != len(set(names)):
+              raise SystemExit("Repository census contains duplicate names")
+
+          allowed = {"creative-technology", "research", "experiments", "publishing"}
+          bad_categories = sorted({entry["category"] for entry in repositories} - allowed)
+          if bad_categories:
+              raise SystemExit(f"Unexpected repository categories: {bad_categories}")
+
+          html = Path("index.html").read_text()
+          for target in ["assets/styles.css", "assets/app.js", "MANUSCRIPT.md", "data/repositories.json"]:
+              if target not in html:
+                  raise SystemExit(f"index.html does not reference {target}")
+
+          manuscript = Path("MANUSCRIPT.md").read_text()
+          for path in required:
+              if path.startswith("manuscript/") and path not in manuscript:
+                  raise SystemExit(f"MANUSCRIPT.md does not link to {path}")
+
+          print("Publication validation passed: 23 repositories, five manuscript parts, required site files present.")
+          PY
