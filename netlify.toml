@@ -5,6 +5,21 @@
   NODE_VERSION = "22"
 
 [[redirects]]
+  from = "/book"
+  to = "/novel.html"
+  status = 301
+
+[[redirects]]
+  from = "/read"
+  to = "/chapter-one.html"
+  status = 301
+
+[[redirects]]
+  from = "/chapter-one"
+  to = "/chapter-one.html"
+  status = 301
+
+[[redirects]]
   from = "/dissertation"
   to = "/MANUSCRIPT.md"
   status = 302
@@ -26,7 +41,7 @@
 [[headers]]
   for = "/assets/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=3600, must-revalidate"
 
 [[headers]]
   for = "/data/*"
