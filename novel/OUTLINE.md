@@ -12,7 +12,7 @@ A direct statement of purpose: I want people to see me, what happened, what I ma
 
 ## Part I — Before the public record
 
-1. **The Dewdrop** — my earliest clear memory in Everett, Washington; drafted and pending approval.
+1. **The Dewdrop** — my earliest clear memory in Everett, Washington; approved July 16, 2026.
 2. **The earliest years I can place** — the next confirmed memories, locations, households, and people after the Everett scene.
 3. **School and self-education** — what formal education did and did not provide.
 4. **What I learned to do alone** — practical knowledge, technology, art, and survival routines.
