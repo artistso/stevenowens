@@ -1,6 +1,6 @@
 # Chapter One — The Dewdrop
 
-**Status:** drafted — pending Steven's approval  
+**Status:** approved by Steven on July 16, 2026  
 **Time:** around age three; exact date not yet established  
 **Place:** Everett, Washington  
 **Primary source:** author testimony, preserved in the private autobiography source archive
