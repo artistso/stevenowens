@@ -23,7 +23,9 @@ It presents:
 - `MANUSCRIPT.md` — web-readable dissertation-style monograph
 - `data/repositories.json` — census of 23 public repositories
 - `docs/AI_CHAT_ARCHIVE_INGESTION.md` — private-source ingestion and public-promotion protocol for historical AI chats
+- `docs/AI_CHAT_EXPORT_PROMPT.md` — robust base64 prompt for reconstructed AI-chat exports
 - `schemas/chat-archive-manifest.schema.json` — machine-readable package manifest for private chat archives
+- `schemas/ai-chat-reconstruction.schema.json` — schema for reconstructed chat exports using base64 message bodies
 - `CITATION.cff` and `codemeta.json` — machine-readable publication metadata
 - `netlify.toml` — zero-build Netlify configuration
 - `.github/ISSUE_TEMPLATE/` — correction and evidence workflows
@@ -84,7 +86,7 @@ Visibility is created through approved summaries, public project evidence, dated
 
 Historical AI conversations should be preserved as original JSON or native platform exports in an encrypted local archive or genuinely private repository. Do not convert machine-readable exports to PDF, and do not commit raw chat archives to this public repository.
 
-Use [`docs/AI_CHAT_ARCHIVE_INGESTION.md`](docs/AI_CHAT_ARCHIVE_INGESTION.md) for the batch-ingestion workflow and [`schemas/chat-archive-manifest.schema.json`](schemas/chat-archive-manifest.schema.json) for package integrity metadata. Only reviewed, redacted, provenance-preserving derivatives may be promoted into this public corpus.
+Use [`docs/AI_CHAT_ARCHIVE_INGESTION.md`](docs/AI_CHAT_ARCHIVE_INGESTION.md) for the batch-ingestion workflow, [`docs/AI_CHAT_EXPORT_PROMPT.md`](docs/AI_CHAT_EXPORT_PROMPT.md) for reconstructed chat exports, [`schemas/chat-archive-manifest.schema.json`](schemas/chat-archive-manifest.schema.json) for package integrity metadata, and [`schemas/ai-chat-reconstruction.schema.json`](schemas/ai-chat-reconstruction.schema.json) for base64 transcript validation. Only reviewed, redacted, provenance-preserving derivatives may be promoted into this public corpus.
 
 ## Local development
 
