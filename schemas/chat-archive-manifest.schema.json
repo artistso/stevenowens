@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/artistso/stevenowens/raw/main/schemas/chat-archive-manifest.schema.json",
+  "title": "AI Chat Archive Package Manifest",
+  "description": "Metadata and integrity records for a private package of historical AI chat exports. The package itself must not be committed to the public repository.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "manifest_version",
+    "package_id",
+    "created_at",
+    "privacy_class",
+    "files"
+  ],
+  "properties": {
+    "manifest_version": {
+      "const": "1.0.0"
+    },
+    "package_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{2,127}$"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "privacy_class": {
+      "const": "private-source"
+    },
+    "description": {
+      "type": "string",
+      "maxLength": 2000
+    },
+    "source_platforms": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 100
+      },
+      "uniqueItems": true
+    },
+    "time_range": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "start": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "end": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        }
+      }
+    },
+    "package_sha256": {
+      "$ref": "#/$defs/sha256"
+    },
+    "files": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/fileRecord"
+      }
+    },
+    "duplicate_groups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["sha256", "paths"],
+        "properties": {
+          "sha256": {
+            "$ref": "#/$defs/sha256"
+          },
+          "paths": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "$ref": "#/$defs/relativePath"
+            },
+            "uniqueItems": true
+          }
+        }
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 2000
+      }
+    }
+  },
+  "$defs": {
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "relativePath": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1024,
+      "not": {
+        "pattern": "(^/|(^|/)\\.\\.(/|$))"
+      }
+    },
+    "fileRecord": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "sha256",
+        "byte_size",
+        "media_type",
+        "source_platform",
+        "record_kind",
+        "contains_sensitive_material"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "byte_size": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "media_type": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 255
+        },
+        "source_platform": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "record_kind": {
+          "enum": [
+            "native-export",
+            "conversation-json",
+            "conversation-jsonl",
+            "generated-summary",
+            "text-transcript",
+            "markdown-transcript",
+            "pdf-fallback",
+            "attachment",
+            "other"
+          ]
+        },
+        "conversation_count": {
+          "type": ["integer", "null"],
+          "minimum": 0
+        },
+        "earliest_message_at": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "latest_message_at": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "contains_sensitive_material": {
+          "type": "boolean"
+        },
+        "reconstructed": {
+          "type": "boolean",
+          "default": false
+        },
+        "original_filename": {
+          "type": ["string", "null"],
+          "maxLength": 1024
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 1000
+          }
+        }
+      }
+    }
+  }
+}
