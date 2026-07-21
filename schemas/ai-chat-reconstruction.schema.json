@@ -1,0 +1,181 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/artistso/stevenowens/raw/main/schemas/ai-chat-reconstruction.schema.json",
+  "title": "AI Chat Reconstruction Export",
+  "description": "Strict JSON schema for reconstructed AI conversation exports. This format is for private-source archives and should not be used to commit raw conversations to the public repository.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "export_format",
+    "export_created_at",
+    "source_platform",
+    "conversation_title",
+    "timestamp_policy",
+    "transcript",
+    "analysis_summary",
+    "audit"
+  ],
+  "properties": {
+    "export_format": {
+      "const": "ai-chat-reconstruction-v1-base64"
+    },
+    "export_created_at": {
+      "type": ["string", "null"],
+      "format": "date-time"
+    },
+    "source_platform": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 100
+    },
+    "conversation_title": {
+      "type": ["string", "null"],
+      "maxLength": 300
+    },
+    "timestamp_policy": {
+      "enum": ["native", "estimated", "mixed", "unavailable"]
+    },
+    "transcript": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/message"
+      }
+    },
+    "analysis_summary": {
+      "type": "string",
+      "maxLength": 12000
+    },
+    "audit": {
+      "$ref": "#/$defs/audit"
+    },
+    "export_error": {
+      "type": ["string", "null"],
+      "maxLength": 1000
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 2000
+      }
+    }
+  },
+  "$defs": {
+    "message": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sequence_index",
+        "role",
+        "timestamp",
+        "timestamp_estimated",
+        "confidence",
+        "content_base64",
+        "content_preview",
+        "attachments",
+        "notes"
+      ],
+      "properties": {
+        "sequence_index": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "role": {
+          "enum": ["user", "assistant", "system", "tool", "unknown"]
+        },
+        "timestamp": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "timestamp_estimated": {
+          "type": ["string", "null"],
+          "format": "date-time"
+        },
+        "confidence": {
+          "enum": ["high", "medium", "low"]
+        },
+        "content_base64": {
+          "type": ["string", "null"],
+          "pattern": "^([A-Za-z0-9+/]{4})*([A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$"
+        },
+        "content_preview": {
+          "type": ["string", "null"],
+          "maxLength": 300
+        },
+        "attachments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/attachment"
+          }
+        },
+        "notes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 1000
+          }
+        }
+      }
+    },
+    "attachment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["filename", "media_type", "description"],
+      "properties": {
+        "filename": {
+          "type": ["string", "null"],
+          "maxLength": 1024
+        },
+        "media_type": {
+          "type": ["string", "null"],
+          "maxLength": 255
+        },
+        "description": {
+          "type": ["string", "null"],
+          "maxLength": 2000
+        }
+      }
+    },
+    "audit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "unsupported_claims",
+        "contradictions",
+        "hallucination_risks",
+        "follow_up_tasks"
+      ],
+      "properties": {
+        "unsupported_claims": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 3000
+          }
+        },
+        "contradictions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 3000
+          }
+        },
+        "hallucination_risks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 3000
+          }
+        },
+        "follow_up_tasks": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "maxLength": 3000
+          }
+        }
+      }
+    }
+  }
+}
