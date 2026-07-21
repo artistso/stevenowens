@@ -22,6 +22,8 @@ It presents:
 - `novel/` — timeline, outline, voice rules, source ledger, model policy, and chapter workspace
 - `MANUSCRIPT.md` — web-readable dissertation-style monograph
 - `data/repositories.json` — census of 23 public repositories
+- `docs/AI_CHAT_ARCHIVE_INGESTION.md` — private-source ingestion and public-promotion protocol for historical AI chats
+- `schemas/chat-archive-manifest.schema.json` — machine-readable package manifest for private chat archives
 - `CITATION.cff` and `codemeta.json` — machine-readable publication metadata
 - `netlify.toml` — zero-build Netlify configuration
 - `.github/ISSUE_TEMPLATE/` — correction and evidence workflows
@@ -77,6 +79,12 @@ The lattice prevents plans, implementations, simulations, tests, replications, a
 This is a **public-output repository**, not the raw Life OS source vault. Do not commit medical or benefits records, private uploads, exact contact or location data, account exports, private-person files, inbox captures, credentials, or unreviewed autobiographical evidence. See [`PRIVACY.md`](PRIVACY.md).
 
 Visibility is created through approved summaries, public project evidence, dated milestones, and clear testimony labels—not through indiscriminate disclosure of private documents.
+
+## Historical AI chat archives
+
+Historical AI conversations should be preserved as original JSON or native platform exports in an encrypted local archive or genuinely private repository. Do not convert machine-readable exports to PDF, and do not commit raw chat archives to this public repository.
+
+Use [`docs/AI_CHAT_ARCHIVE_INGESTION.md`](docs/AI_CHAT_ARCHIVE_INGESTION.md) for the batch-ingestion workflow and [`schemas/chat-archive-manifest.schema.json`](schemas/chat-archive-manifest.schema.json) for package integrity metadata. Only reviewed, redacted, provenance-preserving derivatives may be promoted into this public corpus.
 
 ## Local development
 
